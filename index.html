@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Horizon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Event Horizon</h1>
+    </header>
+    
+    <main class="container">
+        <!-- Add Event Section -->
+        <section class="add-event-section">
+            <h2>Add New Event</h2>
+            <div id="warning-message" class="warning-message hidden">Please fill in all fields.</div>
+            <form id="event-form">
+                <div class="form-group">
+                    <label for="event-name">Event Name</label>
+                    <input type="text" id="event-name" name="event-name" placeholder="e.g. Web Dev Summit">
+                </div>
+                <div class="form-group">
+                    <label for="event-date">Event Date</label>
+                    <input type="date" id="event-date" name="event-date">
+                </div>
+                <div class="form-group">
+                    <label for="event-description">Event Description</label>
+                    <textarea id="event-description" name="event-description" rows="3" placeholder="Describe the event..."></textarea>
+                </div>
+                <button type="submit" class="btn">Add Event</button>
+            </form>
+        </section>
+
+        <!-- Events List Section -->
+        <section class="events-section">
+            <div class="events-header">
+                <h2>Upcoming & Past Events</h2>
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search by name or date (YYYY-MM-DD)...">
+                </div>
+            </div>
+            <div id="events-container" class="events-grid">
+                <!-- Event cards will be dynamically injected here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Your Name</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
